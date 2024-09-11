@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Plein Écran</title>
     <style>
-        /* Supprimer les marges, le padding, et toute couleur de fond */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
-            background-color: white; /* Définit le fond à blanc, ou transparent si nécessaire */
         }
-        iframe {
+        object {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: none; /* Supprime toute bordure */
+            border: none;
         }
     </style>
 </head>
 <body>
-    <iframe src="mon_fichier.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    <object data="mon_fichier.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%">
+        <p>Votre navigateur ne peut pas afficher les PDF. <a href="mon_fichier.pdf">Télécharger le PDF</a>.</p>
+    </object>
 </body>
 </html>
